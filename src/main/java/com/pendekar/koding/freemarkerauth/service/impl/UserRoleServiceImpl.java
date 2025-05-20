@@ -23,7 +23,7 @@ public class UserRoleServiceImpl implements UserRoleService {
     @Override
     public void save(UserRoleWrapper wrapper) {
         UserRole role = new UserRole();
-        role.setCode(wrapper.getCode());
+        role.setCode(wrapper.getCode().toUpperCase());
         role.setRoleName(wrapper.getRoleName());
         userRoleRepository.save(role);
     }
