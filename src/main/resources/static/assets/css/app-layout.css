@@ -1,0 +1,252 @@
+body {
+    background-color: whitesmoke;
+}
+
+.label-control{
+    padding-top: 9px;
+}
+
+.navbar-default{
+    margin: 0 -15px;
+    border-radius: 0;
+    background-color: white;
+    border-left: 0;
+    border-right: 0;
+}
+
+.container {
+    background-color: white;
+    min-height: 93%;
+    margin-top: 25px;
+    box-shadow: 0px 0px 10px 4px #9E9E9E, -4px -6px 15px 4px #EEEEEE, 5px 6px 15px 3px #EEEEEE;
+    border-radius: 5px;
+}
+
+.app-title{
+    padding-bottom: 25px;
+    color: #880E4F;
+    text-shadow: 0 5px 4px #E8F5E9;
+    background-color: gainsboro;
+    margin: 0 -15px;
+    padding-top: 18px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.page-title {
+    line-height: 30px;
+}
+
+.page-title h3{
+    font-size: 18px;
+    font-weight: bold;
+    color: lightslategray;
+}
+
+.main-page{
+    padding: 40px 20px;
+}
+.page-list-control {
+    padding: 10px 0;
+}
+
+/*dataTables custom view*/
+.dataTables_wrapper table thead tr {
+    color: darkblue;
+}
+
+td.datatables_empty {
+    font-size: 14px;
+}
+table.dataTable.no-footer{
+    border-bottom: 1px solid #ecf0f5 !important;
+}
+
+table.dataTable thead th, table.dataTable thead td{
+    border-bottom: 0 !important;
+}
+
+table.dataTable thead .sorting_asc, table.dataTable thead .sorting_desc{
+    background-image:none !important;
+}
+
+table.dataTable thead .sorting:after{
+    content:none !important;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+    height: 28px;
+    padding: 4px 10px;
+}
+
+.pagination>li>a{
+    height: 28px;
+    padding: 4px 10px;
+}
+
+.pagination>li:first-child>a, .pagination>li:last-child>a, .pagination>li:first-child>span, .pagination>li:last-child>span{
+    padding-top: 6px;
+}
+
+.form-container{
+    margin: 20px 0;
+    padding-top: 20px;
+    border-top: 1px solid darkgray;
+}
+
+.form-action{
+    border-top: 3px darkgrey double;
+    float: left;
+    width: 100%;
+    padding: 13px 0;
+    border-bottom: 1px solid darkgrey;
+}
+
+.form-section{
+    font-size: 15px;
+    font-weight: bold;
+    color: lightskyblue;
+    margin: 0 0 20px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid gainsboro;
+}
+
+.page-footer{
+    text-align: right;
+    font-size: 10px;
+    margin: 7px auto;
+    color: darkblue;
+    text-shadow: 1px 1px 1px lightblue;
+}
+
+.ref-title{
+    font-size: 20px;
+    color: darkblue;
+    margin: 0 0 -20px;
+}
+
+@media (min-width: 1200px) {
+    .page-footer{
+        width: 1170px;
+    }
+}
+
+#dialogDescription div:first-child{
+    font-weight: bold;
+}
+
+#dialogDescription{
+    margin: 0 0 30px 0;
+    padding: 16px 0;
+    color: darkblue;
+    border-bottom: 1px solid lightblue;
+    line-height: 22px;
+}
+
+
+/*custom style of table*/
+table.formattedResult {
+    width: 100%;
+}
+
+.formattedResult > thead > tr > th{
+    font-size: 14px;
+    padding: 3px;
+    border: 1px solid darkblue;
+    text-align: center;
+    color: darkblue;
+}
+
+.formattedResult > tbody > tr >td{
+    padding: 3px;
+    border: 1px solid darkblue;
+}
+
+.text-area-result{
+    width: 100%;
+    height: auto;
+    white-space: pre-wrap;
+    background: black;
+    color: white;
+}
+
+.btn.btn-circle.blue:hover{
+    background-color: white;
+    color: darkblue;
+}
+
+.btn.btn-circle.blue {
+    border: 1px solid #1976D2;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 8px 0 8px 0;
+    background-color: #42A5F5;
+    color: white;
+}
+
+.btn.btn-circle.red.disabled:hover{
+    border: 1px solid #D32F2F;
+    background-color: #EF5350;
+}
+
+.btn.btn-circle.red:hover{
+    background-color: white;
+    color: black;
+}
+
+.btn.btn-circle.red {
+    border: 1px solid #D32F2F;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 8px 0 8px 0;
+    background-color: #EF5350;
+    color: white;
+}
+
+.btn-search{
+    cursor: pointer;
+}
+
+.icheckbox_minimal-blue{
+/*    margin-top: 10px;*/
+}
+
+.changeLang{
+    background: #222d32;
+    border: 1px solid #222d32;
+    color: ghostwhite;
+}
+
+.page-content{
+    background: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin: 0 0 5px 0;
+}
+
+
+
+.required label {
+    font-weight: bold;
+}
+
+.required label:after {
+    color: #e32;
+    content: ' *';
+    display:inline-block;
+}
+
+.error:after{
+    content :"this field is required";
+}
+
+.error{
+    border:1px solid indianred;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice{
+    color: black;
+    font-size: 12px;
+}
