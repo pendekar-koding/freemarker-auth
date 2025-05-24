@@ -13,7 +13,7 @@ public class HomeController {
     @RequestMapping(value = {"/","/index", "/home"})
     public String getIndex(Map<String,Object> mapParam, Authentication authentication)throws Exception{
         ObjectMapper mapper = new ObjectMapper();
-        System.out.println(mapper.writeValueAsString(authentication.getPrincipal()));
+//        System.out.println(mapper.writeValueAsString(authentication.getPrincipal()));
         mapParam.put("auth", authentication);
         mapParam.put("pageTitle", "Index");
         return "index";

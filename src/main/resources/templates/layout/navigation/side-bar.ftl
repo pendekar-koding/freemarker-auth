@@ -5,7 +5,7 @@
             <img src="${context}/assets/images/user-icon.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-            <p>${authentication.name}</p>
+            <p>${auth.name}</p>
             <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
     </div>

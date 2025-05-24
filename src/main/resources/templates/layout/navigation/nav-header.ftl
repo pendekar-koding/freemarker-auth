@@ -24,7 +24,7 @@
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="${context}/assets/images/user-icon.png" class="user-image" alt="User Image">
-                            <span class="hidden-xs">${authentication.name}</span>
+                            <span class="hidden-xs">${auth.name}</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
