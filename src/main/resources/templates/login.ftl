@@ -19,12 +19,11 @@
     <!-- iCheck -->
     <link rel="stylesheet" href="${context}/assets/plugins/iCheck/square/blue.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+
 
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
@@ -36,6 +35,28 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
+        <#if (RequestParameters["logout"]??)>
+            <div class="alert alert-success">
+                <@spring.message "label.logout.success" />
+            </div>
+        </#if>
+
+        <#if RequestParameters["error"]??>
+            <#assign ex = Session.SPRING_SECURITY_LAST_EXCEPTION?if_exists>
+            <#if ex?has_content>
+                <#if ex.message?contains("User account is not active")>
+                    <div class="alert alert-danger">
+                        <@spring.message "login.inactive.message" />
+                    </div>
+                <#else>
+                    <div class="alert alert-danger">
+                        <@spring.message "login.failed.message" />
+                    </div>
+                </#if>
+            </#if>
+        </#if>
+
+
         <p class="login-box-msg">
             <@spring.message "form.login.header2"/>
         </p>
@@ -52,11 +73,6 @@
             </div>
             <div class="row">
                 <div class="col-xs-8">
-                    <#--<div class="checkbox icheck">
-                        <label>
-                            <input type="checkbox"> Remember Me
-                        </label>
-                    </div>-->
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
@@ -66,9 +82,6 @@
             </div>
         </form>
 
-        <#--<a href="#">I forgot my password</a><br>
-        <a href="register.html" class="text-center">Register a new membership</a>-->
-
     </div>
     <!-- /.login-box-body -->
 </div>
@@ -76,6 +89,7 @@
 
 <!-- jQuery 3 -->
 <script src="${context}/assets/jquery/jquery.min.js"></script>
+
 <!-- Bootstrap 3.3.7 -->
 <script src="${context}/assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- iCheck -->
@@ -89,5 +103,6 @@
         });
     });
 </script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </body>
 </html>

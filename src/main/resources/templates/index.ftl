@@ -15,7 +15,7 @@
     <!-- Main content -->
     <section class="content">
         <div class="page-content">
-            <p><@spring.message "common.label.welcome"/> ${authentication.name}</p>
+            <p><@spring.message "common.label.welcome"/> ${auth.name}</p>
             <p>Locale : ${.locale}</p>
         </div>
     </section>

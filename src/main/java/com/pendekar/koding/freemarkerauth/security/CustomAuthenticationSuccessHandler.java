@@ -19,7 +19,6 @@ public class CustomAuthenticationSuccessHandler implements AuthenticationSuccess
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
-        logger.info(authentication);
         logger.info(authentication.getDetails());
         String redirectPage = "/index";
 

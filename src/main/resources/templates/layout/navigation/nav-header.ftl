@@ -49,11 +49,9 @@
                                     <a href="${context}/logout" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
+
+
                         </ul>
-                    </li>
-                    <!-- Control Sidebar Toggle Button -->
-                    <li>
-                        <a href="${context}/logout" style="padding-bottom: 20px;"><i class="glyphicon glyphicon-log-out"></i></a>
                     </li>
                 </ul>
             </div>

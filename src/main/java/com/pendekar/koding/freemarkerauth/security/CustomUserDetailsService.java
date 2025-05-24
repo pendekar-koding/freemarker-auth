@@ -2,6 +2,7 @@ package com.pendekar.koding.freemarkerauth.security;
 
 import com.pendekar.koding.freemarkerauth.entity.UserProfile;
 import com.pendekar.koding.freemarkerauth.repository.UserProfileRepository;
+import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -22,6 +23,9 @@ public class CustomUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserProfile user = userProfileRepository.findByDeletedIsFalseAndUsername(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found with username: " + username));
+        if (!user.getActive()) {
+            throw new DisabledException("User account is not active");
+        }
 
         return User.builder()
                 .username(user.getUsername())
