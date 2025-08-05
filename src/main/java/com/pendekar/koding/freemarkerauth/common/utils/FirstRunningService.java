@@ -27,7 +27,7 @@ public class FirstRunningService implements CommandLineRunner {
             UserRoleWrapper userRoleWrapper = new UserRoleWrapper();
             userRoleWrapper.setRoleName("Super Administrator");
             userRoleWrapper.setCode("SADM");
-            userRoleService.save(userRoleWrapper);
+            userRoleService.firstSave(userRoleWrapper);
         }
 
         if (userProfileService.getNum() == 0) {

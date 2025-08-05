@@ -1,5 +1,6 @@
 package com.pendekar.koding.freemarkerauth.security;
 
+import com.pendekar.koding.freemarkerauth.config.CustomUserDetails;
 import com.pendekar.koding.freemarkerauth.entity.UserProfile;
 import com.pendekar.koding.freemarkerauth.repository.UserProfileRepository;
 import org.springframework.security.authentication.DisabledException;
@@ -27,11 +28,6 @@ public class CustomUserDetailsService implements UserDetailsService {
             throw new DisabledException("User account is not active");
         }
 
-        return User.builder()
-                .username(user.getUsername())
-                .password(user.getPassword())
-                .roles(user.getRole().getCode())
-                .disabled(!user.getActive())
-                .build();
+        return new CustomUserDetails(user);
     }
 }

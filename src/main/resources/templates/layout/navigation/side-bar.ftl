@@ -37,7 +37,7 @@
         </li>
         <li class="header">MASTER</li>
         <li>
-            <a href="/master/book/save"><i class="fa fa-folder-open-o"></i> <span>Department</span></a>
+            <a href="${context}/master/book/list"><i class="fa fa-book"></i> <span>Books</span></a>
         </li>
         <li class="header">SYSTEM</li>
         <li>
