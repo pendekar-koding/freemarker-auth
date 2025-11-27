@@ -10,13 +10,12 @@
 <script src="${context}/assets/plugins/iCheck/icheck.min.js"></script>
 <!-- FastClick -->
 <script src="${context}/assets/fastclick/lib/fastclick.js"></script>
-<#--select2-->
+<!-- Select2 -->
 <script src="${context}/assets/select2/js/select2.min.js"></script>
 <!-- AdminLTE App -->
 <script src="${context}/assets/admin-lte/js/adminlte.min.js"></script>
-
+<!-- Autosize -->
 <script src="${context}/assets/autosize/autosize.min.js"></script>
-
 <!-- AdminLTE for demo purposes -->
 <script src="${context}/assets/admin-lte/js/demo.js"></script>
 <script src="${context}/assets/plugins/sweetalert/sweetalert.min.js"></script>

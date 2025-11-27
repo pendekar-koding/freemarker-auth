@@ -13,8 +13,7 @@
     <link rel="stylesheet" href="${context}/assets/plugins/iCheck/all.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="${context}/assets/admin-lte/css/AdminLTE.min.css">
-    <!-- AdminLTE Skins. Choose a skin from the css/skins
-         folder instead of downloading all of them to reduce the load. -->
+    <!-- AdminLTE Skins -->
     <link rel="stylesheet" href="${context}/assets/admin-lte/skins/_all-skins.min.css">
     <link rel="stylesheet" href="${context}/assets/select2/css/select2.min.css">
 
